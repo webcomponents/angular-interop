@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Polymer + Angular</title>
+
+  <!-- Importing Web Component's Polyfill -->
+  <script src="bower_components/platform/platform.js"></script>
+
+  <!-- Importing Custom Elements -->
+  <link rel="import" href="src/my-element.html">
+</head>
+<body ng-app="myApp" ng-controller="MyCtrl as vm">
+
+  <input type="text" ng-model="vm.cool">
+  <span>Polymer + AngularJS binding is {{ vm.cool }}!</span>
+
+  <!-- Using Custom Elements --> 
+  <my-element message="{{ vm.cool }}"></my-element>
+
+  <!-- Importing AngularJS -->
+  <script src="bower_components/angular/angular.js"></script>
+
+  <!-- Loading AngularJS scripts -->
+  <script src="src/my-angular-app.js"></script>
+</body>
+</html>

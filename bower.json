@@ -2,7 +2,7 @@
   "name": "angular-interop",
   "private": true,
   "dependencies": {
-    "polymer": "Polymer/polymer#~0.3.3",
-    "angular": "~1.2.19"
+    "polymer": "Polymer/polymer#^0.4.1",
+    "angular": "~1.2.26"
   }
 }

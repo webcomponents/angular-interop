@@ -5,7 +5,7 @@
   <title>Polymer + Angular</title>
 
   <!-- Importing Web Component's Polyfill -->
-  <script src="bower_components/platform/platform.js"></script>
+  <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
 
   <!-- Importing Custom Elements -->
   <link rel="import" href="src/my-element.html">
@@ -15,7 +15,7 @@
   <input type="text" ng-model="vm.cool">
   <span>Polymer + AngularJS binding is {{ vm.cool }}!</span>
 
-  <!-- Using Custom Elements --> 
+  <!-- Using Custom Elements -->
   <my-element message="{{ vm.cool }}"></my-element>
 
   <!-- Importing AngularJS -->

@@ -1,1 +1,3 @@
 components
+app/**/*.js
+app/**/*.js.map

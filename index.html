@@ -1,27 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Polymer + Angular</title>
+<html>
+  <head>
+    <title>Angular 2 + Polymer interop</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
 
-  <!-- Importing Web Component's Polyfill -->
-  <script src="components/webcomponentsjs/webcomponents.min.js"></script>
+    <script src="https://polygit.org/components/webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="./app/polymer/polymer.component.html">
 
-  <!-- Importing Custom Elements -->
-  <link rel="import" href="src/my-element.html">
-</head>
-<body ng-app="myApp" ng-controller="MyCtrl as vm">
+    <script src="https://npmcdn.com/core-js/client/shim.min.js"></script>
 
-  <input type="text" ng-model="vm.cool">
-  <span>Polymer + AngularJS binding is {{ vm.cool }}!</span>
+    <script src="https://npmcdn.com/zone.js@0.6.12?main=browser"></script>
+    <script src="https://npmcdn.com/reflect-metadata@0.1.3"></script>
+    <script src="https://npmcdn.com/systemjs@0.19.27/dist/system.src.js"></script>
 
-  <!-- Using Custom Elements -->
-  <my-element message="{{ vm.cool }}"></my-element>
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
+  </head>
 
-  <!-- Importing AngularJS -->
-  <script src="components/angular/angular.js"></script>
-
-  <!-- Loading AngularJS scripts -->
-  <script src="src/my-angular-app.js"></script>
-</body>
+  <body>
+    <my-app>Loading...</my-app>
+  </body>
 </html>

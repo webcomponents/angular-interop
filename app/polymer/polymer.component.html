@@ -1,0 +1,24 @@
+<!-- import latest release version of all components from polygit -->
+<link rel="import" href="https://polygit.org/components/polymer/polymer.html">
+
+<dom-module id="my-element">
+  <template>
+    <link rel="stylesheet" href="./polymer.component.css">
+    Polymer binding is <b>{{message}}</b>!
+    <p><button on-click="handleFireEvent" type="button">Fire Polymer event</button></p>
+  </template>
+
+  <script>
+    Polymer({
+      is: "my-element",
+      properties: {
+        message: String
+      },
+      handleFireEvent: function() {
+        this.fire('polymerFireEvent', {
+          message: 'Hello from Polymer'
+        });
+      }
+    });
+  </script>
+</dom-module>

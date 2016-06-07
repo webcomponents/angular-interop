@@ -1,24 +1,12 @@
-# [Polymer](http://www.polymer-project.org/) + [AngularJS](http://www.angularjs.org/)
+# [Polymer](http://www.polymer-project.org/) + [Angular2](http://angular.io/)
 
 ![Polymer + AngularJS](https://cloud.githubusercontent.com/assets/469908/3528048/4d5eb6e8-078b-11e4-9c9a-25ae4a22b439.jpg)
 
-> A demo of interoperability between [Polymer](http://www.polymer-project.org/) and [AngularJs](http://www.angularjs.org/).
+> A demo of interoperability between [Polymer](http://www.polymer-project.org/) and [Angular2](http://angular.io/).
 
 ## Getting started
 
-In order to run it locally you'll need to fetch some dependencies using [Bower](https://www.bower.io/).
-
-* Install [Bower](http://bower.io/):
-
-    ```sh
-    $ [sudo] npm install -g bower
-    ```
-
-* Install local dependencies:
-
-    ```sh
-    $ bower install
-    ```
+In order to run it locally you'll need to:
 
 * Start a local web server:
 
@@ -36,11 +24,6 @@ In order to run it locally you'll need to fetch some dependencies using [Bower](
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 
-## History
-
-For detailed changelog, check [Releases](https://github.com/webcomponents/sass-interop/releases).
-
 ## License
 
 [MIT License](http://webcomponentsorg.mit-license.org/) © WebComponents.org
-

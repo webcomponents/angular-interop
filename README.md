@@ -8,7 +8,7 @@
 ## Getting started
 
 You can see this demo directly here: https://rawgit.com/webcomponents/angular-interop/angular2/index.html
-
+(Thanks to [Kent C. Dodds](https://github.com/kentcdodds) for the protip!)
 
 Or, in order to run it locally you'll need to:
 

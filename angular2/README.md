@@ -1,6 +1,6 @@
 # [Polymer](http://www.polymer-project.org/) + [Angular2](http://angular.io/)
 
-![Polymer + AngularJS](https://cloud.githubusercontent.com/assets/469908/3528048/4d5eb6e8-078b-11e4-9c9a-25ae4a22b439.jpg)
+![Polymer + Angular2](https://cloud.githubusercontent.com/assets/1699357/15891323/4ea3136c-2d74-11e6-98f7-55e0fdd16867.png)
 
 > A demo of interoperability between [Polymer](http://www.polymer-project.org/) and [Angular2](http://angular.io/).
 

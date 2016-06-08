@@ -1,1 +1,4 @@
-components
+.DS_Store
+angularjs/components
+angular2/app/**/*.js
+angular2/app/**/*.js.map

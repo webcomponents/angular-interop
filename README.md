@@ -4,9 +4,13 @@
 
 > A demo of interoperability between [Polymer](http://www.polymer-project.org/) and [Angular2](http://angular.io/).
 
+
 ## Getting started
 
-In order to run it locally you'll need to:
+You can see this demo directly here: https://rawgit.com/webcomponents/angular-interop/angular2/index.html
+
+
+Or, in order to run it locally you'll need to:
 
 * Start a local web server:
 

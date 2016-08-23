@@ -6,12 +6,20 @@ import { Component } from '@angular/core';
 
 <fieldset>
   <legend>Angular 2</legend>
-  <p><input type="text" [(ngModel)]="cool"></p>
   <p><span>Angular2 binding is <b>{{ cool }}</b>!</span></p>
+  <p><input type="text" [(ngModel)]="cool"></p>
 </fieldset>
+
 <fieldset>
   <legend>Polymer</legend>
-  <my-element [message]="cool" (polymerFireEvent)="onPolymerFireEvent($event)"></my-element>
+  <my-element
+
+    [message]="cool"
+    (message-changed)="cool=$event.detail.value"
+
+    (polymerFireEvent)="onPolymerFireEvent($event)"
+
+  ></my-element>
 </fieldset>
   `
 })

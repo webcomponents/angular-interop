@@ -5,17 +5,28 @@
  */
 (function(global) {
 
-  var ngVer = '@2.0.0-rc.1'; // lock in the angular package version; do not let it float to current!
+  var ngVer = '@2.0.0-rc.5'; // lock in the angular package version; do not let it float to current!
+  var routerVer = '@3.0.0-rc.1'; // lock router version
+  var formsVer = '@0.3.0'; // lock forms version
+  var routerDeprecatedVer = '@2.0.0-rc.2'; // temporarily until we update all the guides
+
+  var angular2ModalVer = '@2.0.0-beta.2';
 
   //map tells the System loader where to look for things
   var map = {
     'app': 'app',
 
     '@angular': 'https://npmcdn.com/@angular', // sufficient if we didn't pin the version
+    '@angular/router': 'https://npmcdn.com/@angular/router' + routerVer,
+    '@angular/forms': 'https://npmcdn.com/@angular/forms' + formsVer,
+    '@angular/router-deprecated': 'https://npmcdn.com/@angular/router-deprecated' + routerDeprecatedVer,
     'angular2-in-memory-web-api': 'https://npmcdn.com/angular2-in-memory-web-api', // get latest
     'rxjs': 'https://npmcdn.com/rxjs@5.0.0-beta.6',
     'ts': 'https://npmcdn.com/plugin-typescript@4.0.10/lib/plugin.js',
-    'typescript': 'https://npmcdn.com/typescript@1.8.10/lib/typescript.js',
+    'typescript': 'https://npmcdn.com/typescript@1.9.0-dev.20160409/lib/typescript.js',
+
+
+    'angular2-modal': 'https://npmcdn.com/angular2-modal' + angular2ModalVer
   };
 
   //packages tells the System loader how to load when no filename and/or no extension
@@ -31,6 +42,41 @@
       main: 'index.js',
       defaultExtension: 'js'
     },
+
+
+    'angular2-modal': {
+      defaultExtension: 'js',
+      main: 'index'
+    },
+
+    // Some internal directories in angular2-modal are barrel like (having index.ts)
+    // this works great with webpack, with systemJS it needs mapping.
+    'angular2-modal/providers': {
+      defaultExtension: 'js',
+      main: 'index'
+    },
+    'angular2-modal/overlay': {
+      defaultExtension: 'js',
+      main: 'index'
+    },
+    'angular2-modal/components': {
+      defaultExtension: 'js',
+      main: 'index'
+    },
+
+    // Plugins also need mappings.
+    'angular2-modal/plugins/bootstrap': {
+      defaultExtension: 'js',
+      main: 'index'
+    },
+    'angular2-modal/plugins/vex': {
+      defaultExtension: 'js',
+      main: 'index'
+    },
+    'angular2-modal/plugins/js-native': {
+      defaultExtension: 'js',
+      main: 'index'
+    }
   };
 
   var ngPackageNames = [
@@ -40,8 +86,6 @@
     'http',
     'platform-browser',
     'platform-browser-dynamic',
-    'router',
-    'router-deprecated',
     'upgrade',
   ];
 
@@ -52,11 +96,11 @@
   });
 
   // Add package entries for angular packages
-  ngPackageNames.forEach(function(pkgName) {
+  ngPackageNames.concat(['forms', 'router', 'router-deprecated']).forEach(function(pkgName) {
 
     // Bundled (~40 requests):
     packages['@angular/' + pkgName] = {
-      main: pkgName + '.umd.js',
+      main: '/bundles/' + pkgName + '.umd.js',
       defaultExtension: 'js'
     };
 
@@ -77,7 +121,7 @@
     },
     map: map,
     packages: packages
-  }
+  };
 
   System.config(config);
 

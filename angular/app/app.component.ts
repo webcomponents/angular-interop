@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   template: `
 
 <fieldset>
-  <legend>Angular 2</legend>
+  <legend>Angular</legend>
   <p><span>Angular2 binding is <b>{{ cool }}</b>!</span></p>
   <p><input type="text" [(ngModel)]="cool"></p>
   <b>contenteditable:</b> <div

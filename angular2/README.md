@@ -1,8 +1,8 @@
-# [Polymer](http://www.polymer-project.org/) + [Angular2](http://angular.io/)
+# [Polymer](http://www.polymer-project.org/) + [Angular (>=2)](http://angular.io/)
 
-![Polymer + Angular2](https://cloud.githubusercontent.com/assets/1699357/15891323/4ea3136c-2d74-11e6-98f7-55e0fdd16867.png)
+![Polymer + Angular](https://cloud.githubusercontent.com/assets/1699357/15891323/4ea3136c-2d74-11e6-98f7-55e0fdd16867.png)
 
-> A demo of interoperability between [Polymer](http://www.polymer-project.org/) and [Angular2](http://angular.io/).
+> A demo of interoperability between [Polymer](http://www.polymer-project.org/) and [Angular](http://angular.io/).
 
 
 ## Getting started

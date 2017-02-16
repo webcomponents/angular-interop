@@ -8,6 +8,13 @@ import { Component } from '@angular/core';
   <legend>Angular 2</legend>
   <p><span>Angular2 binding is <b>{{ cool }}</b>!</span></p>
   <p><input type="text" [(ngModel)]="cool"></p>
+  <b>contenteditable:</b> <div
+    contenteditable="true"
+
+    [textContent]="cool"
+    (input)="cool=$event.target.textContent"
+
+  >**{{cool}}</div>
 </fieldset>
 
 <fieldset>

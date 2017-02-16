@@ -7,16 +7,16 @@
 
 ## Getting started
 
-You can see this demo directly here: https://cdn.rawgit.com/webcomponents/angular-interop/5bf92049/angular/index.html
+You can see this demo directly [here on rawgit](https://cdn.rawgit.com/webcomponents/angular-interop/5bf92049/angular/index.html)
 (Thanks to [Kent C. Dodds](https://github.com/kentcdodds) for the pro tip!)
 
 Or, in order to run it locally you'll need to:
 
 * Start a local web server:
 
-    ```sh
-    $ python -m SimpleHTTPServer
-    ```
+```sh
+$ python -m SimpleHTTPServer
+```
 
 * Open the browser and navigate to [localhost:8000](http://localhost:8000/)
 

@@ -1,0 +1,44 @@
+<link rel="import" href="https://polygit.org/components/polymer/polymer-element.html">
+
+<dom-module id="polymer-element">
+
+  <template>
+    <link rel="stylesheet" href="./assets/polymer/polymer.component.css">
+    <p>
+      Polymer binding is <b>{{message}}</b>!
+    </p>
+    <p>
+      <paper-input bind-value="message" label="Polymer input"></paper-input>
+    </p>
+    <b>contenteditable:</b>
+    <div contenteditable="true" bind-textContent="message">{{message}}</div>
+    <p>
+      <button on-click="handleFireEvent" type="button">Fire Polymer event to Angular</button>
+    </p>
+  </template>
+
+  <script>
+    class PolymerElement extends Polymer.Element {
+      static get is() {
+        return "polymer-element";
+      }
+      static get properties() {
+        return {
+          message: {
+            type: String,
+            notify: true
+          }
+        };
+      }
+      handleFireEvent() {
+        this.dispatchEvent(new CustomEvent('polymerFireEvent', {
+          detail: {
+            message: `${this.message} from Polymer`
+          }
+        }));
+      }
+    }
+    customElements.define(PolymerElement.is, PolymerElement);
+  </script>
+
+</dom-module>

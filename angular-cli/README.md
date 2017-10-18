@@ -7,24 +7,23 @@
 
 ## Getting started
 
-You can see this demo directly [here on rawgit](https://cdn.rawgit.com/webcomponents/angular-interop/5bf92049/angular/index.html)
-(Thanks to [Kent C. Dodds](https://github.com/kentcdodds) for the pro tip!)
-
-Or, in order to run it locally you'll need to:
+In order to run it locally you'll need to:
 
 * Start a local web server:
 
 ```sh
-$ python -m SimpleHTTPServer
+$ cd angular-cli/ # this folder
+$ npm install
+$ ng serve
 ```
 
-* Open the browser and navigate to [localhost:8000](http://localhost:8000/)
+* Open the browser and navigate to [localhost:4200](http://localhost:4200/)
 
 ## Contributing
 
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -m 'Add some feature'`
+3. Commit your changes: `git commit -m 'feat(my-new-feature): Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 

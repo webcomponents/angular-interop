@@ -5,7 +5,7 @@
 ## Getting started
 
 - For AngularJs (1.x) see folder [angularjs](angularjs/)
-- For Angular (>= 2.x) see folder [angular](angular/)
+- For Angular (>= 2.x) see folder [angular](angular-cli/)
 
 ## License
 
